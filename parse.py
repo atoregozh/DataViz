@@ -1,16 +1,13 @@
 """
-Parse data from an ugly CSV or Excel file, and render it in
-JSON, save to a database, and visualize in graph form.
-Part I: Taking data from a CSV/Excel file, and return it into a format
-that is easier for Python to play with.
+Takes data from a CSV/Excel file, and returns the data as a list of dictionaries with corresponding column header and data.
 """
 
 import csv
 MY_FILE = "sample_sfpd_incident_all.csv"
 
 def parse(raw_file, delimiter):
-	"""Parses a raw CSV file to a JSON-line object."""
-
+	"""Parses a raw CSV file to a JSON-like object. JSON-like object == list of dictionaries with corresponding column header and data"""
+	
 	# Open CSV file
 	opened_file = open(raw_file, 'rU')
     
